@@ -11,8 +11,8 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title>
-          Quasar App
+        <q-toolbar-title class="text-h8 text-weight-bold text-uppercase">
+          Fitness projekt
         </q-toolbar-title>
 
         <div>Quasar v{{ $q.version }}</div>
@@ -91,6 +91,12 @@ const linksList = [
     caption: 'Community Quasar projects',
     icon: 'favorite',
     link: 'https://awesome.quasar.dev'
+  },
+  {
+    title: 'Veleučilište u Rijeci',
+    caption: 'Službena web stranica',
+    icon: 'school', // Odabrana ikona za vanjski link (npr. "public" ili "school")
+    link: 'https://www.veleri.hr/' 
   }
 ]
 
