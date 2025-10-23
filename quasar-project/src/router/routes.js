@@ -9,8 +9,13 @@ const routes = [
 
       // OVDJE DODAJETE NOVU PUTANJU:
       { 
-        path: '/popisKnjiga', // URL putanja (što se upisuje u preglednik)
+        path: '/popisnovihKnjiga', // URL putanja (što se upisuje u preglednik)
         component: () => import('pages/NoveKnjigePage.vue') // Putanja do .vue datoteke
+      },
+
+      { 
+        path: '/PopisKnjiga', // URL putanja (što se upisuje u preglednik)
+        component: () => import('pages/PopisKnjigaPage.vue') // Putanja do .vue datoteke
       },
     ]
   },

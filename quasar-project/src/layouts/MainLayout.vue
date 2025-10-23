@@ -12,7 +12,7 @@
         />
 
         <q-toolbar-title class="text-h8 text-weight-bold text-uppercase">
-          Fitness projekt
+          Aplikacija 
         </q-toolbar-title>
 
         <div>Quasar v{{ $q.version }}</div>
@@ -51,10 +51,10 @@ import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
+    title: 'Pocetna stranica',
+    caption: 'Ovdje se dolazi do pocetne stranice',
+    icon: 'home',
+    link: 'http://localhost:9000/#/'
   },
   {
     title: 'Github',
@@ -97,7 +97,20 @@ const linksList = [
     caption: 'Službena web stranica',
     icon: 'school', // Odabrana ikona za vanjski link (npr. "public" ili "school")
     link: 'https://www.veleri.hr/' 
+  },
+  {
+    title: 'Nove knjige',
+    caption: 'Pogledajte nove knjige',
+    icon: 'book',
+    link: 'http://localhost:9000/#/popisnovihKnjiga'
+  },
+  {
+    title: 'Popis knjiga',
+    caption: 'Pogledajte sve knjige',
+    icon: 'book',
+    link: 'http://localhost:9000/#/PopisKnjiga'
   }
+
 ]
 
 const leftDrawerOpen = ref(false)
