@@ -1,55 +1,76 @@
 <template>
   <q-page padding>
     
-    <div class="q-pa-md q-gutter-y-sm">
-      
-      <q-toolbar class="text-primary">
-        <q-btn flat round dense icon="arrow_back" @click="$router.go(-1)" />
-        
-        <q-toolbar-title class="text-h5 text-weight-bold text-uppercase">
-          Cjelokupni Popis Knjiga
-        </q-toolbar-title>
-        
-        <q-btn flat round dense icon="more_vert" />
-      </q-toolbar>
+    <div class="q-pa-md">
 
-      <q-toolbar class="bg-grey-9 text-white">
-        <q-btn flat round dense>
-          <q-icon name="menu" />
-        </q-btn>
-        <q-toolbar-title>
-          Drugi Toolbar
-        </q-toolbar-title>
-        <q-btn flat round dense>
-          <q-icon name="more_vert" />
-        </q-btn>
-      </q-toolbar>
+      <div class="text-h5 text-weight-bold text-uppercase q-mb-md text-primary">
+        Cjelokupni Popis Knjiga
+      </div>
 
-      <q-toolbar class="bg-purple text-white">
-        <q-btn flat round dense icon="assignment_ind" />
-        <q-toolbar-title>
-          Treći Toolbar
-        </q-toolbar-title>
-        <q-btn flat round dense icon="more_vert" />
-      </q-toolbar>
-
-      <q-toolbar class="bg-black text-white">
-        <q-btn flat round dense icon="assignment_ind">
-          <q-badge floating color="red">2</q-badge>
-        </q-btn>
-        <q-toolbar-title>
-          Četvrti Toolbar
-        </q-toolbar-title>
-        <q-btn flat round dense icon="sim_card" class="q-mr-xs" />
-        <q-btn flat round dense icon="gamepad" />
-      </q-toolbar>
+      <q-table
+        title="Popis"
+        :rows="rows"
+        :columns="columns"
+        row-key="id"
+        :rows-per-page-options="[5, 10, 0]"
+        separator="cell"
+        bordered
+      />
       
     </div>
   </q-page>
 </template>
 
-
-
 <script setup>
-// Nema logike za ovaj jednostavan prikaz
+import { ref } from 'vue';
+
+// 1. DEFINICIJA STRUKTURE STUPACA
+const columns = [
+  { name: 'id', required: true, label: 'ID', align: 'left', field: 'id', sortable: true },
+  { name: 'name', required: true, label: 'Naslov Knjige', align: 'left', field: 'name', sortable: true },
+  { name: 'author', label: 'Autor', align: 'left', field: 'author', sortable: true },
+  { name: 'pages', label: 'Broj Stranica', field: 'pages', sortable: true },
+  { name: 'year', label: 'Godina', field: 'year', sortable: true },
+];
+
+
+const rows = ref([
+  {
+    id: 1,
+    name: 'Patnje mladog Werthera',
+    author: 'Johann Wolfgang von Goethe',
+    pages: 224,
+    year: 1774
+  },
+  {
+    id: 2,
+    name: 'Zločin i kazna',
+    author: 'Fjodor Dostojevski',
+    pages: 671,
+    year: 1866
+  },
+  {
+    id: 3,
+    name: 'Sto godina samoće',
+    author: 'Gabriel García Márquez',
+    pages: 417,
+    year: 1967
+  },
+  {
+    id: 4,
+    name: 'Mali princ',
+    author: 'Antoine de Saint-Exupéry',
+    pages: 96,
+    year: 1943
+  },
+  {
+    id: 5,
+    name: 'Starac i more',
+    author: 'Ernest Hemingway',
+    pages: 127,
+    year: 1952
+  }
+]);
+
+
 </script>

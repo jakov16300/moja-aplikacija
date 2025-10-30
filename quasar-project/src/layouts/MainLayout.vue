@@ -57,46 +57,10 @@ const linksList = [
     link: 'http://localhost:9000/#/'
   },
   {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  },
-  {
-    title: 'Veleučilište u Rijeci',
-    caption: 'Službena web stranica',
-    icon: 'school', // Odabrana ikona za vanjski link (npr. "public" ili "school")
-    link: 'https://www.veleri.hr/' 
+    title: 'Pretrazivanje',
+    caption: 'Pretraga knjiga',
+    icon: 'search', 
+    link: 'http://localhost:9000/#/pretrazivanje' 
   },
   {
     title: 'Nove knjige',
@@ -104,11 +68,31 @@ const linksList = [
     icon: 'book',
     link: 'http://localhost:9000/#/popisnovihKnjiga'
   },
+
+  { title: 'Login',
+    icon: 'login',
+    link: 'http://localhost:9000/#/login'
+  },
+  {
+
+   title: 'Registracija',
+    icon: 'input',
+    link: 'http://localhost:9000/#/registracija'
+
+  },
+
   {
     title: 'Popis knjiga',
     caption: 'Pogledajte sve knjige',
     icon: 'book',
     link: 'http://localhost:9000/#/PopisKnjiga'
+  },
+
+  {
+    title: 'Lokacija ',
+    caption: 'Pogledajte sve knjige',
+    icon: 'location_on',
+    link: 'http://localhost:9000/#/lokacija'
   }
 
 ]

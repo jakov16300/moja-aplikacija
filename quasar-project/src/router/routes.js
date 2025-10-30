@@ -5,22 +5,41 @@ const routes = [
     children: [
       // Postojeće putanje (npr. početna stranica)
       { path: '', component: () => import('pages/IndexPage.vue') },
-      // ... ostale putanje ...
-
-      // OVDJE DODAJETE NOVU PUTANJU:
+    
       { 
         path: '/popisnovihKnjiga', // URL putanja (što se upisuje u preglednik)
         component: () => import('pages/NoveKnjigePage.vue') // Putanja do .vue datoteke
       },
 
       { 
-        path: '/PopisKnjiga', // URL putanja (što se upisuje u preglednik)
-        component: () => import('pages/PopisKnjigaPage.vue') // Putanja do .vue datoteke
+        path: '/PopisKnjiga', 
+        component: () => import('pages/PopisKnjigaPage.vue')
+        
+      },
+
+      { 
+        path: '/pretrazivanje', 
+        component: () => import('pages/PretrazivanjePage.vue') 
+      },
+
+      { 
+        path: '/login', 
+        component: () => import('pages/LoginPage.vue') 
+      },
+
+      { 
+        path: '/registracija', 
+        component: () => import('pages/RegistracijaPage.vue') 
+      },
+
+      { 
+        path: '/lokacija', 
+        component: () => import('pages/LokacijaPage.vue') 
       },
     ]
   },
 
-  // ... (ostali kod, npr. 404 stranica)
+ 
 ]
 
 export default routes
